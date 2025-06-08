@@ -1,0 +1,125 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f9f9f9;
+}
+
+.row {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.title-row {
+  text-align: center;
+}
+
+.title-row h2 {
+  margin: 0;
+  padding: 10px;
+}
+
+.button-row {
+  text-align: center;
+}
+
+.button-container button {
+  padding: 8px 16px;
+  margin: 0 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.ram-row {
+  display: flex;
+  justify-content: center;
+}
+
+.memory-ram {
+  width: 100%;
+  max-width: 800px;
+}
+
+.memory-ram table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #e0e0e0;
+}
+
+.memory-ram th,
+.memory-ram td {
+  border: 1px solid #999;
+  padding: 4px 8px;
+  text-align: left;
+}
+
+.components-row {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.cpu {
+  background: #fff;
+  padding: 10px;
+  border: 2px solid #000;
+  min-width: 300px;
+  order: 2; /* Coloca CPU en el centro */
+}
+
+.cpu .block {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #333;
+  background-color: #ccc;
+  text-align: center;
+}
+
+.cpu .alu {
+  background: linear-gradient(to bottom, #ddd, #999);
+}
+
+.cpu .registers {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.entrada {
+  order: 1; /* Coloca Entrada a la izquierda */
+  background-color: #f0f0f0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  min-width: 120px;
+}
+
+.salida {
+  order: 3; /* Coloca Salida a la derecha */
+  background-color: #f0f0f0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  min-width: 120px;
+}
+
+.entrada table, .salida table {
+  border-collapse: collapse;
+}
+
+.entrada td, .salida td {
+  border: 1px solid #333;
+  padding: 5px 10px;
+}
+
+/* Para pantallas pequeñas */
+@media (max-width: 768px) {
+  .components-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .entrada, .cpu, .salida {
+    order: 0;
+    width: 100%;
+    max-width: 300px;
+  }
+}
